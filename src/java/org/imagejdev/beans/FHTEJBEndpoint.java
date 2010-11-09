@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package org.imagejdev.beans;
 
@@ -13,7 +10,12 @@ import org.imagejdev.FHTGPU;
 import org.imagejdev.api.FHTEJBService;
 
 /**
- * Consumes an existing EBJ for the FHT GPU Service
+ * Consumes an existing EBJ to expose as a Hessian Binary Web Service
+ *
+ * Demonstrates use of Dependency Injection @EJB...
+ * Demonstrates nominal connector code "extends HessianServlet"
+ * fht() performs a single 3D FHT as described in the FHTEJBService interface
+ * getIterative3DDecon() performs the processing as a black box functional unit (E.g. data + parameters; return result)
  * @author rick
  */
 public class FHTEJBEndpoint extends HessianServlet implements FHTEJBService {
